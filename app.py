@@ -142,6 +142,7 @@ def main():
 
                 # Hand sign classification
                 hand_sign_id = keypoint_classifier(pre_processed_landmark_list)
+                print(hand_sign_id)
                 if hand_sign_id == "Not Applciable":  # Point gesture #Change to 2 to work
                     point_history.append(landmark_list[8])
                 else:
@@ -502,6 +503,7 @@ def draw_info_text(image, brect, handedness, hand_sign_text,
         info_text = info_text + ':' + hand_sign_text  + " " + str(random.randint(70,85)) + "%" # for printing accuracy
     cv.putText(image, info_text, (brect[0] + 5, brect[1] - 4),
                cv.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1, cv.LINE_AA)
+
     return image
 
 
