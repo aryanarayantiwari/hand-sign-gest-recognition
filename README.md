@@ -1,1 +1,1 @@
-# Real Time Hand Sign Language Translation System
+# Real Time Hand Sign Gesture Recognition System
